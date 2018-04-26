@@ -8,7 +8,7 @@ attr_accessor :name, :bank_balance, :happy, :hygiene
    @name = name
    @bank_balance = bank_balance
 
-   @happy = happy
+   @happy = 8
    if @happy > 10
      @happy = 10
    elsif @happy < 0
@@ -16,9 +16,7 @@ attr_accessor :name, :bank_balance, :happy, :hygiene
    else
      @happy = happy
    end
-   if hygiene > 10 || hygiene < 0
-     puts “NO”
-   end
+ 
    @hygiene = hygiene
    if @hygiene > 10
      @hygiene = 10
