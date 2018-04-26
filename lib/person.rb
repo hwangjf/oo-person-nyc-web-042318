@@ -1,14 +1,32 @@
-
+require ‘pry’
 class Person
 attr_accessor :name, :bank_balance, :happy, :hygiene
 
 
 
- def initialize(name)
+ def initialize(name, bank_balance=25, happy=8, hygiene=8)
    @name = name
-   @bank_balance = 25
-   @happy = 8
-   @hygience = 8
+   @bank_balance = bank_balance
+
+   @happy = happy
+   if @happy > 10
+     @happy = 10
+   elsif @happy < 0
+     @happy = 0
+   else
+     @happy = happy
+   end
+   if hygiene > 10 || hygiene < 0
+     puts “NO”
+   end
+   @hygiene = hygiene
+   if @hygiene > 10
+     @hygiene = 10
+   elsif @hygiene < 0
+     @hygiene = 0
+   else
+     @hygiene = hygiene
+   end
  end
 
  def clean?
@@ -129,3 +147,4 @@ end
 
 Jon = Person.new(“Jon”, 30, 4, 10)
 Sarah = Person.new(“Sarah”, 500, 2, :sunglasses:
+binding.pry
