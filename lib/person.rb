@@ -4,10 +4,11 @@ attr_accessor :name, :bank_balance, :happy, :hygiene
 
 
 
- def initialize(name, bank_balance=25, happy=8, hygiene=8)
+ def initialize(name)
    @name = name
    @bank_balance = 25
-   @happy = 
+   @happy = 8
+   @hygience = 8
  end
 
  def clean?
