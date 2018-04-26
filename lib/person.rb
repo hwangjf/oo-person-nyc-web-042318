@@ -146,5 +146,5 @@ attr_accessor :name, :bank_balance, :happy, :hygiene
 end
 
 Jon = Person.new(“Jon”, 30, 4, 10)
-Sarah = Person.new(“Sarah”, 500, 2, :sunglasses:
+Sarah = Person.new(“Sarah”, 500, 2, :sunglasses)
 binding.pry
